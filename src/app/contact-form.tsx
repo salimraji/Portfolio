@@ -1,5 +1,5 @@
 "use client";
-
+import { useState } from "react";
 import {
   Typography,
   Card,
@@ -9,9 +9,39 @@ import {
   Button,
   IconButton,
 } from "@material-tailwind/react";
-import { EnvelopeIcon, PhoneIcon, TicketIcon } from "@heroicons/react/24/solid";
+import { EnvelopeIcon, PhoneIcon } from "@heroicons/react/24/solid";
 
 export function ContactForm() {
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [status, setStatus] = useState("");
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setStatus("Sending...");
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email, message }),
+      });
+
+      if (res.ok) {
+        setStatus("Message sent successfully!");
+        setEmail("");
+        setMessage("");
+      } else {
+        setStatus("Failed to send message.");
+      }
+    } catch (error) {
+      console.error(error);
+      setStatus("Failed to send message.");
+    }
+  };
+
   return (
     <section className="px-8 py-16" id="contact">
       <div className="container mx-auto mb-20 text-center">
@@ -66,35 +96,42 @@ export function ContactForm() {
               </div>
             </div>
             <div className="w-full mt-8 md:mt-0 md:px-10 col-span-4 h-full p-5">
-              <form action="#">
-                {/* @ts-ignore */}
+              <form onSubmit={handleSubmit}>
                 <Input
                   color="gray"
                   size="lg"
                   variant="static"
                   label="Email"
                   name="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                   placeholder="eg. lucas@mail.com"
                   containerProps={{
                     className: "!min-w-full mb-8",
                   }}
                 />
-                {/* @ts-ignore */}
                 <Textarea
                   color="gray"
                   size="lg"
                   variant="static"
                   label="Your Message"
                   name="message"
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
                   containerProps={{
                     className: "!min-w-full mb-8",
                   }}
                 />
                 <div className="w-full flex justify-end">
-                  <Button className="w-full md:w-fit" color="gray" size="md">
+                  <Button className="w-full md:w-fit" color="gray" size="md" type="submit">
                     Send message
                   </Button>
                 </div>
+                {status && (
+                  <Typography color="gray" className="mt-4 text-center">
+                    {status}
+                  </Typography>
+                )}
               </form>
             </div>
           </CardBody>
