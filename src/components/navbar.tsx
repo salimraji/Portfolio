@@ -89,6 +89,9 @@ export function Navbar() {
           ))}
         </ul>
         <div className="hidden items-center gap-2 lg:flex">
+                      <a href="https://github.com/salimraji" target="_blank">
+              <Button color="gray">Github</Button>
+            </a>
           <a href="https://www.linkedin.com/in/salimemmanuelraji" target="_blank">
             <Button color="gray">LinkedIn</Button>
           </a>
@@ -117,6 +120,9 @@ export function Navbar() {
             ))}
           </ul>
           <div className="mt-6 mb-4 flex items-center gap-2">
+            <a href="https://github.com/salimraji" target="_blank">
+              <Button color="gray">Github</Button>
+            </a>
             <a href="https://www.linkedin.com/in/salimemmanuelraji" target="_blank">
               <Button color="gray">LinkedIn</Button>
             </a>

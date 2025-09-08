@@ -60,14 +60,16 @@ export function Skills() {
         <Typography variant="h1" color="blue-gray" className="mb-4">
           What I do
         </Typography>
-        <Typography
-          variant="lead"
-          className="mx-auto w-full !text-gray-500 lg:w-10/12"
-        >
-          I&apos;m not just a developer; I&apos;m a digital dreamweaver.
-          Crafting immersive online experiences is not just a job but my
-          calling. Discover below how I can help you.
-        </Typography>
+<Typography
+  variant="lead"
+  className="mx-auto w-full !text-gray-500 lg:w-10/12"
+>
+  From building robust backends and scalable APIs, to crafting seamless web
+  frontends and intuitive mobile experiences. My work
+  bridges functionality with user experience, ensuring every layer of the
+  stack comes together smoothly.
+</Typography>
+
       </div>
       <div className="container mx-auto grid grid-cols-1 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
         {SKILLS.map((props, idx) => (

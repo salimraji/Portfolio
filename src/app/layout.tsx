@@ -11,9 +11,9 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  title: "Salim Raji - Software Developer Portfolio",
+  title: "Salim Raji",
   description:
-    "The portfolio of Salim Emmanuel Raji, a software developer specializing in web and mobile application development.",
+    "The portfolio of Salim Raji, a software developer specializing in web and mobile application development.",
 };
 
 export default function RootLayout({

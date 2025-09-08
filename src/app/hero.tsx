@@ -20,9 +20,8 @@ function Hero() {
             variant="lead"
             className="mb-4 !text-gray-500 md:pr-16 xl:pr-28"
           >
-            I&apos;m Salim Emmanuel Raji, a passionate software developer based in Lebanon. Here,
-            you&apos;ll get a glimpse of my journey in the world of software
-            development, where creativity meets functionality.
+            I&apos;m Salim Emmanuel Raji, a software developer based in Lebanon. Here,
+            you&apos;ll get a glimpse of my journey as a developer, where creativity meets functionality.
           </Typography>
           <div className="grid">
             <Typography
