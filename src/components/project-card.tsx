@@ -16,7 +16,7 @@ interface ProjectCardProps {
 export function ProjectCard({ img, title, desc }: ProjectCardProps) {
   return (
     <Card color="transparent" shadow={false} className="flex flex-col">
-      <CardHeader floated={false} className="mx-0 mt-0 mb-6 h-48">
+      {/* <CardHeader floated={false} className="mx-0 mt-0 mb-6 h-48">
         <Image
           src={img}
           alt={title}
@@ -24,7 +24,7 @@ export function ProjectCard({ img, title, desc }: ProjectCardProps) {
           height={768}
           className="h-full w-full object-cover"
         />
-      </CardHeader>
+      </CardHeader> */}
       <CardBody className="p-0 flex flex-col flex-grow">
         <div>
           <a
@@ -40,9 +40,9 @@ export function ProjectCard({ img, title, desc }: ProjectCardProps) {
           </Typography>
         </div>
         <div className="mt-auto pt-4">
-          <Button color="gray" size="sm">
+          {/* <Button color="gray" size="sm">
             see details
-          </Button>
+          </Button> */}
         </div>
       </CardBody>
     </Card>

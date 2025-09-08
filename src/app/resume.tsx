@@ -37,7 +37,7 @@ export function Resume() {
             My Resume
           </Typography>
           <Typography className="mb-4 mt-3 w-9/12 font-normal !text-gray-500">
-            A highly skilled and creative Software Developer with experience in crafting visually stunning and functionally robust websites and web applications.
+            A skilled and creative Software Developer with experience in developing websites, web applications and mobile applications.
           </Typography>
           <a href="/Salim Raji Resume.pdf" download>
             <Button
